@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const marker = {};
   socket.on("receive-location", (data) => {
     const {id,lat,lng} = data;
-    map.setView([lat, lng], 13);
+    map.setView([lat, lng]);
     if(marker[id]){
         marker[id].setLatLng([lat, lng]);
     }
